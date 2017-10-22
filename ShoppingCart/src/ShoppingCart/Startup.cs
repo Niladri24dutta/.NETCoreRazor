@@ -8,16 +8,28 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using ShoppingCart.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace ShoppingCart
 {
     public class Startup
     {
-        
+        private IConfigurationRoot _configurationRoot;
+
+        public Startup(IHostingEnvironment hostingEnvironment)
+        {
+            _configurationRoot = new ConfigurationBuilder()
+                .SetBasePath(hostingEnvironment.ContentRootPath)
+                .AddJsonFile("appsettings.json")
+                .Build();
+        }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
-            services.AddTransient<IPieReposiory, MockPieRepository>();
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection"))); //add dbcontext for EF
+            services.AddTransient<ICategoryRepository, CategoryRepository>(); // register for DI
+            services.AddTransient<IPieReposiory, PieRepository>();
             services.AddMvc();
         }
 
