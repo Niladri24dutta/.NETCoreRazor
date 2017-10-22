@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingCart.Models;
-
+using ShoppingCart.ViewModel;
 
 namespace ShoppingCart.Controllers
 {
@@ -18,9 +18,12 @@ namespace ShoppingCart.Controllers
             this._categoryRepository = categoryRepository;
             this._pieRepository = pieRepository;
         }
-        public ViewResult Index()
+        public ViewResult List()
         {
-            return View(this._pieRepository.Pies);
+            PiesListViewModel pieListModel = new PiesListViewModel();
+            pieListModel.Pies = this._pieRepository.Pies;
+            pieListModel.CurrentCategory = "seasonal pies";
+            return View(pieListModel);
         }
     }
 }
