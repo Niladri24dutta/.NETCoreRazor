@@ -201,9 +201,13 @@
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Program.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Startup.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Controllers\PieController.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Migrations\20171022205525_Initial.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Migrations\20171022205525_Initial.Designer.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Migrations\AppDbContextModelSnapshot.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\AppDbContext.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\Category.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\CategoryRepository.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\DbInitializer.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\ICategoryRepository.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\IPieReposiory.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\MockCategoryRepository.cs
