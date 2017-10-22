@@ -3,3 +3,4 @@ playing with .NET Core MVC and Razor views
 
 1. Created basic UI for listing of shopping cart (`done`)
 2. Add EF Core and database migration(`done`)
+3. Create partial view and view component for UI (`wip`)
