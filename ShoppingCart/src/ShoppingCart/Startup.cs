@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using ShoppingCart.Models;
 
 namespace ShoppingCart
 {
@@ -15,21 +16,17 @@ namespace ShoppingCart
         
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+            services.AddTransient<IPieReposiory, MockPieRepository>();
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole();
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            app.UseDeveloperExceptionPage();
+            app.UseStatusCodePages();
+            app.UseStaticFiles();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
