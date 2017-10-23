@@ -5,4 +5,4 @@ playing with .NET Core MVC and Razor views
 2. Add EF Core and database migration(`done`)
 3. Create partial view , view component and custom tag helper for UI (`done`)
 4. Create routing and navigation(`done`)
-5. Add new for for placing order (`wip`)
+5. Add new for form placing order (`wip`)
