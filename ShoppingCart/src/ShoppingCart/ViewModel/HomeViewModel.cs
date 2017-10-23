@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ShoppingCartApp.ViewModel
 {
-    public class PiesListViewModel
+    public class HomeViewModel
     {
-        public IEnumerable<Pie> Pies { get; set; }
-        public string CurrentCategory { get; set; }
+        public IEnumerable<Pie> PiesOfTheWeek { get; set; }
     }
 }

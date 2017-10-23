@@ -51,6 +51,7 @@
 --reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Routing.Abstractions\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Routing.Abstractions.dll
 --reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Server.IISIntegration\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Server.IISIntegration.dll
 --reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Server.Kestrel\1.0.1\lib\netstandard1.3\Microsoft.AspNetCore.Server.Kestrel.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Session\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Session.dll
 --reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.StaticFiles\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.StaticFiles.dll
 --reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.WebUtilities\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.WebUtilities.dll
 --reference:C:\Users\Administrator\.nuget\packages\Microsoft.CodeAnalysis.Common\1.3.0\lib\netstandard1.3\Microsoft.CodeAnalysis.dll
@@ -200,18 +201,29 @@
 --resource:"D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\obj\Debug\netcoreapp1.0\ShoppingCartdotnet-compile.deps.json",ShoppingCart.deps.json
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Program.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Startup.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Components\ShoppingCartSummary.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Controllers\ContactController.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Controllers\HomeController.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Controllers\PieController.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Controllers\ShoppingCartController.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Migrations\20171022205525_Initial.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Migrations\20171022205525_Initial.Designer.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Migrations\20171023083121_AddShoppingCartItem.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Migrations\20171023083121_AddShoppingCartItem.Designer.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Migrations\AppDbContextModelSnapshot.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\AppDbContext.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\Category.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\CategoryRepository.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\DbInitializer.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\ICategoryRepository.cs
-D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\IPieReposiory.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\IPieRepository.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\MockCategoryRepository.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\MockPieRepository.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\Pie.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\PieRepository.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\ShoppingCartItem.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\Models\ShoppingCartModel.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\TagHelpers\EmailTagHelper.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\ViewModel\HomeViewModel.cs
 D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\ViewModel\PiesListViewModel.cs
+D:\Web training videos\asp .net core\.NET Core razor pages\.NETCoreRazor\ShoppingCart\src\ShoppingCart\ViewModel\ShoppingCartViewModel.cs

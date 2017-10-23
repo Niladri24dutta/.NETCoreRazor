@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ShoppingCart.Models;
-using ShoppingCart.ViewModel;
+using ShoppingCartApp.Models;
+using ShoppingCartApp.ViewModel;
 
-namespace ShoppingCart.Controllers
+namespace ShoppingCartApp.Controllers
 {
     public class PieController : Controller
     {
         private readonly ICategoryRepository _categoryRepository;
-        private readonly IPieReposiory _pieRepository;
+        private readonly IPieRepository _pieRepository;
 
-        public PieController(ICategoryRepository categoryRepository,IPieReposiory pieRepository)
+        public PieController(ICategoryRepository categoryRepository,IPieRepository pieRepository)
         {
             this._categoryRepository = categoryRepository;
             this._pieRepository = pieRepository;

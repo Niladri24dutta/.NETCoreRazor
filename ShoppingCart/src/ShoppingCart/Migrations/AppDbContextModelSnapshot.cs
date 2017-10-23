@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using ShoppingCart.Models;
+using ShoppingCartApp.Models;
 
-namespace ShoppingCart.Migrations
+namespace ShoppingCartApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
@@ -62,12 +62,37 @@ namespace ShoppingCart.Migrations
                     b.ToTable("Pies");
                 });
 
+            modelBuilder.Entity("ShoppingCart.Models.ShoppingCartItem", b =>
+                {
+                    b.Property<int>("ShoppingCartItemId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Amount");
+
+                    b.Property<int?>("PieId");
+
+                    b.Property<string>("ShoppingCartId");
+
+                    b.HasKey("ShoppingCartItemId");
+
+                    b.HasIndex("PieId");
+
+                    b.ToTable("ShoppingCartItems");
+                });
+
             modelBuilder.Entity("ShoppingCart.Models.Pie", b =>
                 {
                     b.HasOne("ShoppingCart.Models.Category", "Category")
                         .WithMany("Pies")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ShoppingCart.Models.ShoppingCartItem", b =>
+                {
+                    b.HasOne("ShoppingCart.Models.Pie", "Pie")
+                        .WithMany()
+                        .HasForeignKey("PieId");
                 });
         }
     }
