@@ -1,7 +1,21 @@
 ﻿@model ShoppingCartViewModel
 
+@if (TempData["ItemAdded"] != null)
+{
+    if (TempData["ItemAdded"].ToString() == "Success")
+    {
+        <h1>item added successfully!</h1><br />
+    }
+
+
+<div class="row">
+    <div class="col-md-pull-1 pull-right" style="padding-right:15px;">
+        <button class="btn btn-info" id="back-button">Back to previous page</button>
+    </div>
+</div>
 <h2>Your shopping cart</h2>
 <h4>Here are the delicious pies in your shopping cart.</h4>
+
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
@@ -33,3 +47,8 @@
         </tr>
     </tfoot>
 </table>
+}
+else
+{
+    <h1>Something went wrong!</h1>
+}

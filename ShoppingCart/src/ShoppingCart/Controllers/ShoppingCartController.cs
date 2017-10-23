@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingCartApp.Models;
 using ShoppingCartApp.ViewModel;
+using System.Diagnostics;
 
 namespace ShoppingCartApp.Controllers
 {
@@ -28,7 +29,19 @@ namespace ShoppingCartApp.Controllers
                 ShoppingCart = _shoppingCart,
                 ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
             };
+            //Debug.WriteLine(TempData.Keys);           
             return View(shoppingCartViewModel);
+        }
+
+        public RedirectToActionResult AddToShoppingCart(int pieId)
+        {
+            var existingPies = _pieRepository.Pies.FirstOrDefault(x => x.PieId == pieId);
+            if(existingPies != null)
+            {
+                _shoppingCart.AddToCart(existingPies, 1);
+                TempData["ItemAdded"] = "Success";
+            }
+            return RedirectToAction("Index");
         }
     }
 }

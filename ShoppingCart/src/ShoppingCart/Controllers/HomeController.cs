@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ShoppingCartApp.Models;
 using ShoppingCartApp.ViewModel;
 
-namespace ShoppingCart.Controllers
+namespace ShoppingCartApp.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,7 +15,7 @@ namespace ShoppingCart.Controllers
         {
             _pieRepository = repository;
         }
-        public ViewResult Index()
+        public ViewResult Index(int id)
         {
             var model = new HomeViewModel
             {
