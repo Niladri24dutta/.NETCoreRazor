@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace ShoppingCart.Controllers
+namespace ShoppingCartApp.Controllers
 {
     public class ContactController : Controller
     {

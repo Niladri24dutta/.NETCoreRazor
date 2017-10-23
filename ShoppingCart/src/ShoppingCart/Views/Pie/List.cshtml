@@ -8,7 +8,10 @@
 
 </head>
 <body>
-    <h1>@Model.CurrentCategory</h1>
+    <h1>@Model.CurrentCategory</h1> &nbsp; 
+    <h1>
+        Total Items :@Model.Pies.ToList().Count      
+    </h1>
     @foreach (var item in Model.Pies)
     {
         @Html.Partial("PieOverviewSummary",item)
