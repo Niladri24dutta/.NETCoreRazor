@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using ShoppingCart.Models;
+using ShoppingCartApp.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace ShoppingCart
+namespace ShoppingCartApp
 {
     public class Startup
     {
@@ -29,8 +29,13 @@ namespace ShoppingCart
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection"))); //add dbcontext for EF
             services.AddTransient<ICategoryRepository, CategoryRepository>(); // register for DI
-            services.AddTransient<IPieReposiory, PieRepository>();
+            services.AddTransient<IPieRepository, PieRepository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<ShoppingCartModel>(sp => ShoppingCartModel.GetCart(sp));
             services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
+
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -38,6 +43,7 @@ namespace ShoppingCart
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
             DbInitializer.Seed(app);
         }

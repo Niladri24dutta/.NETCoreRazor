@@ -8,8 +8,8 @@ using ShoppingCartApp.Models;
 namespace ShoppingCartApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20171022205525_Initial")]
-    partial class Initial
+    [Migration("20171023083121_AddShoppingCartItem")]
+    partial class AddShoppingCartItem
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,12 +63,37 @@ namespace ShoppingCartApp.Migrations
                     b.ToTable("Pies");
                 });
 
+            modelBuilder.Entity("ShoppingCart.Models.ShoppingCartItem", b =>
+                {
+                    b.Property<int>("ShoppingCartItemId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Amount");
+
+                    b.Property<int?>("PieId");
+
+                    b.Property<string>("ShoppingCartId");
+
+                    b.HasKey("ShoppingCartItemId");
+
+                    b.HasIndex("PieId");
+
+                    b.ToTable("ShoppingCartItems");
+                });
+
             modelBuilder.Entity("ShoppingCart.Models.Pie", b =>
                 {
                     b.HasOne("ShoppingCart.Models.Category", "Category")
                         .WithMany("Pies")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ShoppingCart.Models.ShoppingCartItem", b =>
+                {
+                    b.HasOne("ShoppingCart.Models.Pie", "Pie")
+                        .WithMany()
+                        .HasForeignKey("PieId");
                 });
         }
     }

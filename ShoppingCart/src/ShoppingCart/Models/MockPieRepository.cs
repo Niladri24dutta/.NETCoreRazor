@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShoppingCart.Models
+namespace ShoppingCartApp.Models
 {
-    public class MockPieRepository : IPieReposiory
+    public class MockPieRepository : IPieRepository
     {
         private readonly ICategoryRepository _categoryRepository = new MockCategoryRepository();
         public IEnumerable<Pie> Pies

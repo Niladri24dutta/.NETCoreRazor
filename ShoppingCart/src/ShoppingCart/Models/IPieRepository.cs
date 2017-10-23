@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShoppingCart.Models
+namespace ShoppingCartApp.Models
 {
-    public interface IPieReposiory
+    public interface IPieRepository
     {
         IEnumerable<Pie> Pies { get; }
         IEnumerable<Pie> PiesOfTheWeek { get; }

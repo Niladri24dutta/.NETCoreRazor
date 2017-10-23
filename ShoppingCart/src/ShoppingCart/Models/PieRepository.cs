@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShoppingCart.Models
+namespace ShoppingCartApp.Models
 {
-    public class PieRepository : IPieReposiory
+    public class PieRepository : IPieRepository
     {
         private readonly AppDbContext _appDbContext;
 
